@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-image:url(background.jpg);
+        background-position: right, left top;
+        background-repeat: repeat, repeat;
+        background-size: contain,cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .stand{
+        height: 100vh;
+        width: 20vw;
+    }
+    .stand1{
+        margin-top: 10%;
+        height: 90%;
+        width: 100%;
+    }
+    .flag{
+        height: 100vh;
+        width: 30vw;
+    }
+    .content{
+        height: 100vh;
+        width: 50vw;
+        color: rgb(0, 41, 77);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .flag1{
+        height: 18%;
+        width: 38%;
+        opacity: 0;
+        margin-left: -9.2rem;
+        margin-top: 26rem;
+        position: relative;
+        
+    }
+    h1{
+        background-color: rgb(255, 115, 0);
+        color: aliceblue;
+    }
+    h2{
+        background-color: rgb(255, 255, 255);
+        color: rgb(7, 0, 98);
+    }
+    button{
+        background-color: green;
+        color: salmon;
+        width: 120px;
+        border: white 1px solid;
+        border-radius: 5px;
+        height: 35px;
+    }
+      
+  @keyframes example {
+    from {top: 0px;}
+  to {top:-300px;}
+  }
+</style>
+<body>
+                <div class="stand">
+                    <img src="stand1.png" class="stand1" alt=""/>
+                </div>
+                <div class="flag">
+                    <img src="flag1.gif" class="flag1" alt=""/>
+                </div>
+                <div class="content">
+                    <h1>Happy Republic Day</h1>
+                    <h2>Republic day falls on the 26th of January. It is significant for India. The reason why Republic day is important is that it’s India got its Constitution. We got Independence in 1947, and the country started working towards setting up the Constitution for the country. The Constitution set out the rules and regulations to run the country.</h2>
+                    <button class="button">Click Here</button>
+                </div>
+        </div>
+    
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('.button').click(function(){
+            $('.flag1').css("opacity","1");
+            $('.flag1').css("animation-name","example");
+            $('.flag1').css("animation-duration","4s");
+            $('.flag1').css("animation-fill-mode","forwards");
+            $('body').css("background-image","url(fireworks.gif)")
+        });
+    });
+</script>
